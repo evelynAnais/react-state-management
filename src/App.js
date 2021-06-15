@@ -19,7 +19,7 @@ function App () {
   
   return (
     <div>
-      <button onClick={() => setCount(count + 1)}>Click Count: {count}</button>
+      <button onClick={() => setCount(count + 1)}>beautiful people: {count}</button>
     </div>  
   )
 }
