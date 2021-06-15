@@ -1,25 +1,55 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
 
-function App() {
+// function App() {
+//   const [subscribed, setSubscribed] = useState(false);
+//   //const handleClick = (e) => console.log(e.target);
+//   console.log("Subscribed status:", subscribed);
+//   return (
+//     <section>
+//       <p>hey plz subscribe!</p>
+//     <button onClick={() => setSubscribed(!subscribed)}>{
+//     subscribed ? "not yet subscribed" : "Hello lovely world, i will subscribe"}</button>
+//     </section>
+//   );
+// }
+
+function App () {
+  const [count, setCount] = useState(0);
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <div>
+      <button onClick={() => setCount(count + 1)}>Click Count: {count}</button>
+    </div>  
+  )
 }
+
+// function App() {
+//   const [subscribed, setSubscribed] = useState(false);
+
+//   return (
+//     <section>
+//       <p>Please click to subscribe to my updates!</p>
+//       <button onClick={() => setSubscribed(true)}>{subscribed ? "Unsubscribe" : "Subscribe"}</button>
+//     </section>
+//   );
+// }
+
+// function App() {
+//   const [subscribed, setSubscribed] = useState(false);
+//   const [alerts, setAlerts] = useState(false);
+
+//   return (
+//     <section>
+//       <p>Please click to subscribe to my updates!</p>
+//       <button onClick={() => setSubscribed(!subscribed)}>
+//         {subscribed ? "Unsubscribe" : "Subscribe"}
+//       </button>
+//       <button onClick={() => setAlerts(!alerts)}>
+//         {alerts ? "Stop Email Alerts" : "Get Email Alerts"}
+//       </button>
+//     </section>
+//   );
+// }
 
 export default App;
