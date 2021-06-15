@@ -1,14 +1,18 @@
 import React, { useState } from 'react';
+import Header from './Header';
+import Content from './Content';
 import './App.css';
 
 
 
-function App () {
-  const [count, setCount] = useState(0);
-  
+
+function App () {  
+
+
   return (
     <div>
-      <button onClick={() => setCount(count + 1)}>beautiful people: {count}</button>
+      <Header />
+      <Content />
     </div>  
   )
 }
