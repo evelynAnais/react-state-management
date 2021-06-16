@@ -1,6 +1,7 @@
-function Content() {
+import React from "react";
 
-  return loggedIn && <p>CONTENT</p>
+function Content({ loggedIn, text }) {
+  return loggedIn && <p>{text}</p>
 }
 
 export default Content;
