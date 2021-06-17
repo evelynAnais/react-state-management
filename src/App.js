@@ -1,11 +1,29 @@
 import React, { useState } from 'react';
-import CoinTossCounter from './CoinTossCounter';
-import './App.css';
+import SubscriberForm from './SubscriberForm';
+import SubscriberList from './SubscriberList';
 
 function App () {  
-  //const [results, setResults] = useState([]);
+  const [subscribers, setSubscribers] = useState([]);
+
+  const createSubscriber = (newSubscriber) =>
+    setSubscribers((currentSubscribers) => [
+      newSubscriber,
+      ...currentSubscribers,
+    ]);
+
+  const deleteSubscriber = (indexToDelete) =>
+    setSubscribers((currentSubscribers) => 
+    currentSubscribers.filter((post, index) => index !== indexToDelete)
+    );
+  
   return (
-    <CoinTossCounter />
+    <>
+      <SubscriberForm createSubscriber={createSubscriber} />
+      <SubscriberList
+        subscribers={subscribers}
+        deleteSubscriber={deleteSubscriber}
+      />
+    </>
   );
 }
 
